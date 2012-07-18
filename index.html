@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <style></style>
 
-    <title> ECMAScript regrets </title>    
+    <title> ECMAScript regrets </title>
   </head>
 
   <body>
@@ -19,50 +19,39 @@
         technology afterward without breaking the content that relies on the technology
         (a.k.a. "breaking the web"), so all technologies stay mostly as they are.
         It doesn't mean they are good. It just means it prevents some content to break.
-        
+
         <h2>There is no way back, but there is a way forward</h2>
         <p>Existing web technologies cannot be changed, but new technologies can be created.
         Recently, to "work around" JavaScript, we've seen the rise of languages that compile
-        down to JavaScript like <a href="http://coffeescript.org/">CoffeeScript</a> or 
+        down to JavaScript like <a href="http://coffeescript.org/">CoffeeScript</a> or
         <a href="http://roy.brianmckenna.org/">Roy</a>.
         ECMA TC39 is also making an excellent work at improving the language by adding things
         (since nothing can be removed). Progress can be followed on the
-        <a href="wiki.ecmascript.org/">wiki</a> or on 
+        <a href="wiki.ecmascript.org/">wiki</a> or on
         <a href="https://mail.mozilla.org/listinfo/es-discuss">es-discuss</a>.
-        
+
         <h2>Documenting history and educating those who arrived late to the party</h2>
         <p>This page aims at listing things that experienced JavaScript developers wish were
         removed or different in the language. The goal here is to explain to newcomers why
         things are as they are and what are the traps to avoid. For those who'd be tempted
         by creating a language that compiles down to JavaScript, this page aims also at
         listing errors that should not be reproduced.
-        
-        
-      </section>  
-      
+      </section>
+
       <section>
         <h1>typeof null shouldn't be "object"</h1>
         <p>It is 'object' because first implementation (citation needed)
-        
       </section>
+
       <section>
         <h1>==</h1>
         <p>It is considered as a bad practice to use it.
-        
       </section>
+
       <section>
         <h1>wrong 'this' callback scoping</h1>
         <p>Often leads to declaring 'self' or 'that'. Lexical scoping would solve this problem.
-        
       </section>
-      
-      
-      
-      
-      
-      
-      
-      
     </article>
   </body>
 </html>
