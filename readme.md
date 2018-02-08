@@ -73,7 +73,7 @@ function Person(){
 var p = new Person();
 ````
 
-In the ````growUp```` function above, we'd expect ````this.age```` to refer to the person's age. It is not the case; in JavaScript, the value used for ````this```` is not lexical, but dynamic.
+In the ````growUp```` function above, we'd expect ````this.age```` to refer to the person's age. It is not the case; in JavaScript, every function defines its own ````this```` parameter (or, in other words, every function is also a method). Thus, the ````growUp```` function's ````this```` name shadows the ````Person```` function's ````this```` name in the lexical scope.
 
 In non-strict mode, by default, ````this```` refers to the global object (with implicit conversion which makes the bug hard to track down in this case). In strict mode, the default value is ````undefined````, so the above code will throw a TypeError when trying to access the ````age```` property of ````undefined````.
 
@@ -82,7 +82,7 @@ In non-strict mode, by default, ````this```` refers to the global object (with i
 
 To work around this problem, two solutions are usually used:
 ````javascript
-// 1) lexical alias to |this|
+// 1) An alias to |this| with some name that isn't shadowed
 
 function Person(){
     var self = this; // some choose 'that' instead of 'self'. Choose one and be consistent
